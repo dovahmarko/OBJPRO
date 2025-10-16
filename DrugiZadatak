@@ -1,0 +1,26 @@
+#include <iostream>
+int*  vrati_niz() {
+    
+    int* niz = new int[10]{1,1};
+    
+    for(int i = 2; i<10 ;i++){
+        
+        niz[i] = niz[i-1] + niz[i-2];
+    }
+    
+    return niz;
+}
+
+int main()
+{
+    
+    int* niz = vrati_niz();
+    for(int i=0;i<10;i++)
+    {
+        std::cout<< niz[i]<< " " << std::endl;
+    }
+    
+    delete[] niz;
+
+    return 0;
+}
