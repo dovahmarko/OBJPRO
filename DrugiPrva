@@ -1,0 +1,27 @@
+#include <iostream>
+
+int limit(int value, int low = 0, int high = 100) {
+if (value < low) return low;
+if (value > high) return high;
+return value;
+}
+
+double limit(double value, double low = 0.0, double high = 1.0) {
+if (value < low) return low;
+if (value > high) return high;
+return value;
+}
+
+int main() {
+std::cout << "limit(50) = " << limit(50) << std::endl;
+std::cout << "limit(-10) = " << limit(-10) << std::endl;
+std::cout << "limit(150) = " << limit(150) << std::endl;
+std::cout << "limit(75,50,100) = " << limit(75, 50, 100) << std::endl;
+
+std::cout << "limit(0.5) = " << limit(0.5) << std::endl;
+std::cout << "limit(-0.2) = " << limit(-0.2) << std::endl;
+std::cout << "limit(1.5) = " << limit(1.5) << std::endl;
+std::cout << "limit(2.5,1.0,3.0) = " << limit(2.5, 1.0, 3.0) << std::endl;
+
+return 0;
+}
